@@ -1,0 +1,52 @@
+.activity-container {
+
+    margin-top: 25px;
+
+    border: 3px solid #44b7e8;
+
+    border-radius: 30px;
+
+    padding: 20px;
+
+    color: white;
+}
+
+.table-container {
+
+    background: #cfe8d0;
+
+    border-radius: 25px;
+
+    padding: 30px;
+}
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+thead {
+
+    background: #156082;
+    color: white;
+}
+
+th,
+td {
+
+    border: 1px solid white;
+
+    padding: 18px;
+
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background: #d0d5db;
+}
+
+tbody tr:nth-child(even) {
+    background: #c0c5cb;
+}

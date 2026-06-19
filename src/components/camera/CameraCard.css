@@ -1,0 +1,34 @@
+.camera-wrapper {
+    text-align: center;
+    color: white;
+}
+
+.camera-card {
+
+    width: 330px;
+    height: 260px;
+
+    border-radius: 30px;
+
+    border: 2px solid #09273d;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.parameter-box {
+
+    width: 180px;
+    height: 40px;
+
+    border: 2px solid #09273d;
+
+    border-radius: 10px;
+
+    background: transparent;
+}
