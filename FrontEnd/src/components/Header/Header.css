@@ -1,0 +1,41 @@
+.header-container {
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.header-container h1 {
+
+  color: #3f9fd4;
+
+  font-size: 42px;
+
+  font-weight: bold;
+}
+
+.logo-box {
+
+  width: 140px;
+  height: 50px;
+
+  background: #0f638a;
+
+  color: white;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 25px;
+
+  border: 2px solid #083b54;
+}

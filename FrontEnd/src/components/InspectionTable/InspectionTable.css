@@ -1,0 +1,38 @@
+.inspection-table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.inspection-table th {
+
+  background: #0f638a;
+
+  color: white;
+
+  padding: 15px;
+
+  font-size: 22px;
+}
+
+.inspection-table td {
+
+  padding: 14px;
+
+  text-align: center;
+
+  font-size: 22px;
+
+  border: 1px solid #e5e5e5;
+}
+
+.inspection-table tbody tr:nth-child(odd) {
+
+  background: #d5d8dc;
+}
+
+.inspection-table tbody tr:nth-child(even) {
+
+  background: #c3c8cf;
+}

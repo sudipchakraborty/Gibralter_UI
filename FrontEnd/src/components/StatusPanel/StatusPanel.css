@@ -1,0 +1,54 @@
+.status-panel {
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 40px;
+}
+
+.status-box {
+
+  text-align: center;
+}
+
+.status-box label {
+
+  display: block;
+
+  font-size: 28px;
+
+  margin-bottom: 10px;
+}
+
+.value-box {
+
+  width: 200px;
+
+  padding: 10px;
+
+  background: #0f638a;
+
+  color: white;
+
+  border-radius: 18px;
+
+  font-size: 32px;
+}
+
+.inspection-window {
+
+  background: #147ba8;
+
+  color: white;
+
+  font-size: 34px;
+
+  font-weight: bold;
+
+  padding: 12px 40px;
+}
