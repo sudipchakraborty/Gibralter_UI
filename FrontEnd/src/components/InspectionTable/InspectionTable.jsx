@@ -1,3 +1,5 @@
+// InspectionTable.jsx
+
 import "./InspectionTable.css";
 
 function InspectionTable({ data }) {
@@ -22,9 +24,11 @@ function InspectionTable({ data }) {
 
       <tbody>
 
-        {data.map((row) => (
+        {data.map((row, index) => (
 
-          <tr key={row.id}>
+          <tr
+            key={`${row.id}-${row.datetime}-${index}`}
+          >
 
             <td>{row.id}</td>
             <td>{row.datetime}</td>
@@ -41,6 +45,7 @@ function InspectionTable({ data }) {
       </tbody>
 
     </table>
+
   );
 }
 

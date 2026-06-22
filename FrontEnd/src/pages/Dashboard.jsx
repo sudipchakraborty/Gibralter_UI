@@ -20,7 +20,7 @@ function Dashboard() {
     new Date().toLocaleTimeString()
   );
 
-  // Live clock
+  // Live Clock
   useEffect(() => {
 
     const timer = setInterval(() => {
@@ -35,7 +35,7 @@ function Dashboard() {
 
   }, []);
 
-  // Socket.IO connection
+  // Socket.IO Connection
   useEffect(() => {
 
     console.log("Connecting to backend...");
@@ -46,29 +46,60 @@ function Dashboard() {
 
     });
 
-    // Existing data from server
+    // Initial data from backend
     socket.on("initialData", (data) => {
 
       console.log("Initial Data:", data);
 
-      setInspectionData(data);
+      const sortedData = [...data].sort(
 
-      setTotalCount(data.length);
+        (a, b) =>
+
+          new Date(b.datetime) -
+
+          new Date(a.datetime)
+
+      );
+
+      setInspectionData(sortedData);
+
+      setTotalCount(sortedData.length);
 
     });
 
-    // New inspection data
+    // Live inspection update
     socket.on("inspectionUpdate", (newInspection) => {
 
-      console.log("New Inspection:", newInspection);
+      console.log(
+        "New Inspection:",
+        newInspection
+      );
 
-      setInspectionData((prevData) => [
+      setInspectionData((prevData) => {
 
-        newInspection,
+        // Prevent duplicates
+        const exists = prevData.some(
 
-        ...prevData
+          item =>
 
-      ]);
+            item.id === newInspection.id &&
+            item.datetime === newInspection.datetime
+
+        );
+
+        if (exists) {
+          return prevData;
+        }
+
+        return [
+
+          newInspection,
+
+          ...prevData
+
+        ].slice(0, 100);
+
+      });
 
       setTotalCount((prev) => prev + 1);
 
@@ -102,6 +133,7 @@ function Dashboard() {
     </div>
 
   );
+
 }
 
 export default Dashboard;

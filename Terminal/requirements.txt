@@ -1,0 +1,8 @@
+paddlepaddle
+paddleocr
+opencv-python
+numpy
+requests
+paddleocr
+ultralytics
+#torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128

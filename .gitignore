@@ -1,72 +1,102 @@
-# Dependencies
-node_modules/
+# =====================================
+# Node.js
+# =====================================
 
-# Production build
-dist/
-build/
+Frontend/node_modules/
+Backend/node_modules/
 
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Logs
-logs
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
+# =====================================
+# Build Output
+# =====================================
 
-# Coverage reports
-coverage/
+Frontend/dist/
+Frontend/build/
 
-# IDE and Editor files
+Backend/dist/
+
+# =====================================
+# Environment Variables
+# =====================================
+
+.env
+.env.local
+.env.development
+.env.production
+
+Frontend/.env*
+Backend/.env*
+
+# =====================================
+# Python
+# =====================================
+
+Terminal/venv/
+Terminal/.venv/
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =====================================
+# Python OCR Models
+# =====================================
+
+Terminal/models/
+Terminal/checkpoints/
+
+# PaddleOCR downloaded models
+.inference/
+ppocr*
+*.pdmodel
+*.pdiparams
+
+# =====================================
+# VS Code
+# =====================================
+
 .vscode/
+
+# =====================================
+# JetBrains
+# =====================================
+
 .idea/
-*.swp
-*.swo
-*.sublime-project
-*.sublime-workspace
 
-# OS generated files
-.DS_Store
+# =====================================
+# Windows
+# =====================================
+
 Thumbs.db
+Desktop.ini
 
-# Package manager files (optional)
-.pnpm-store/
+# =====================================
+# Logs
+# =====================================
 
-# Cache directories
-.cache/
-.parcel-cache/
-.eslintcache
+logs/
+*.log
 
-# Vite files
-.vite/
+# =====================================
+# Temporary Files
+# =====================================
 
-# Temporary files
 tmp/
 temp/
+*.tmp
 
-# Local Netlify folder
-.netlify/
+# =====================================
+# Coverage
+# =====================================
 
-# Local deployment folders
-.vercel/
+coverage/
 
-# Testing
-.nyc_output/
+# =====================================
+# OS Files
+# =====================================
 
-# Storybook build outputs
-storybook-static/
-
-# TypeScript
-*.tsbuildinfo
+.DS_Store
